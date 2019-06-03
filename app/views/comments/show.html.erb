@@ -1,0 +1,17 @@
+<% if (!(@article.comments).empty?) then %>
+
+	<p>
+  		<strong>Commenter :</strong>
+  		<%= @comment.commenter %>
+	</p>
+ 
+	<p>
+  		<strong>Comment :</strong>
+  		<%= @comment.body %>
+	</p>
+
+<% else %>
+	<p>No comments to display</p> 
+<% end%>
+
+<%= link_to 'Back', article_path(@article) %>
